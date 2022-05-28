@@ -56,8 +56,8 @@ void SecondWorker::process() {
     cv::cvtColor(roi, roi, cv::COLOR_BGR2GRAY);
     cv::Scalar m = cv::mean(roi);
 
-    // insensitivity range assumed as a random value between 100 and 300 for now @todo: change it later
-    int insensitivityRange = rand() % 200 + 100;
+    // insensitivity range assumed as a 255 @todo: change it later
+    int insensitivityRange = 255;
 
     // Display a mirrored image if the mean pixel intensity of the left half of the frame is above half of the insensitivity range
     if (m[0] > insensitivityRange / 2)
