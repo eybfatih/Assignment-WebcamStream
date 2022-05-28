@@ -35,7 +35,7 @@ int sharedImshow(cv::Mat image, std::string name) {
 
 int main(int argc, char** argv) {
 
-    int videoSource = 2;
+    int videoSource = 0;
 
     // set the video source using command line
     std::cout << "Have " << argc << " arguments:" << std::endl;
