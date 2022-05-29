@@ -20,3 +20,48 @@ Please provide the solution as a public git repository with clear instructions o
         3. Perform a computational-heavy algorithm called `LogitechFrameProcessingMagic` on a frame (simulate this by sleeping a random time between 500-1500 [ms]). Display a mirrored image if the mean pixel intensity of the left half of the frame is above half of the insensitivity range, otherwise display the original image.
 
     What pixel color format would fit the aforementioned requirements best and why?
+
+
+
+# Usage
+Tested on linux and windows using both Visual Studio and Qt
+
+### 1. You may clone the repository directly to your workflow
+It may be necessary to change ***videoSource***. Integer value that represents your camera.
+
+### 2. Windows Build
+Clone the github repository
+
+    mkdir build
+    cd build
+    cmake -DOpenCV_DIR="C:/Users/fme/Documents/opencv/build" ../
+
+Change the path above as your opencv dir
+
+Open ***WebcamStream.sln*** with ***Visual Studio***
+
+    Build All
+
+***.exe*** file will be created under the ***Debug*** folder.
+
+Open Command Promt and type:
+
+    ./WebcamStream.exe 0
+
+You can change the value ***0*** for select your camera.
+
+### 2. Linux Build
+Clone the github repository
+
+    mkdir build
+    cd build
+    cmake ../
+    make
+
+***WebcamStream*** file will be created under the ***build*** folder.
+
+Open Terminal and type:
+
+    ./WebcamStream 0
+
+You can change the value ***0*** for select your camera.
